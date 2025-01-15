@@ -1,4 +1,10 @@
-torch==2.5.1
+torch==2.5.0
+torchvision==0.20.0
 typer==0.15.1
 fastapi==0.115.6
 uvicorn==0.34.0
+matplotlib==3.10.0
+loguru==0.7.3
+wandb==0.19.2
+scikit-learn==1.6.1
+scipy==1.15.1
