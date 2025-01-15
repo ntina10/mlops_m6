@@ -1,8 +1,18 @@
 from m6_project.data import corrupt_mnist
+import os
 import torch
+import pytest
 from torch.utils.data import TensorDataset
 from unittest.mock import patch
 
+@pytest.mark.skipif(
+    not os.path.exists("data/processed"),
+    reason="Processed data not found."
+)
+@pytest.mark.skipif(
+    not os.path.exists("data/raw"),
+    reason="Raw data not found."
+)
 def test_data():
     train, test = corrupt_mnist()
     assert len(train) == 30000
