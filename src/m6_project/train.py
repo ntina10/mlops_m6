@@ -8,7 +8,7 @@ from sklearn.metrics import RocCurveDisplay, accuracy_score, f1_score, precision
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu")
 
-
+# Hello world 
 def train(lr: float = 0.001, batch_size: int = 32, epochs: int = 5) -> None:
     """Train a model on MNIST."""
     print("Training day and night")
